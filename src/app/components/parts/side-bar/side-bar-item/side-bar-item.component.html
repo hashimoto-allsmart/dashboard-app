@@ -1,0 +1,8 @@
+<li class="side-bar-item">
+  <a (click)="isVisible = !isVisible">
+    <span class="pull-left"><i class="fa fa-dashboard"></i></span>{{title}}
+  </a>
+  <ul class="nav-pills">
+    <li [class.visible]="isVisible" *ngFor="let item of items"><a>{{item}}</a></li>
+  </ul>
+</li>

@@ -1,0 +1,12 @@
+<div id="app-side-bar" [class.hovering]="isHovering" [class.toggled]="isVisible">
+  <!-- <button type="button" (click)="onClick()" class="btn btn-outline-black icon-button">
+    <i class="fa fa-list"></i>
+  </button> -->
+  <!-- <div id="app-side-bar-inside" (mouseover)="isOpen=true" (mouseout)="onClose()" [class.hover]="isOpen"> -->
+  <div id="app-side-bar-inside">
+    <ul class="sidebar-nav nav-pills" id="menu">
+      <app-side-bar-item></app-side-bar-item>
+      <app-side-bar-item></app-side-bar-item>
+    </ul>
+  </div>
+</div>

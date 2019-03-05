@@ -1,0 +1,102 @@
+#app-side-bar {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+#app-side-bar-inside {
+  z-index: 1000;
+  position: absolute;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #404E67;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#app-side-bar.toggled #app-side-bar-inside {
+  width: 250px;
+}
+
+#page-content-app-side-bar {
+  position: absolute;
+  padding: 15px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#app-side-bar.toggled #page-content-app-side-bar {
+  position: relative;
+  margin-right: 0px;
+}
+
+.fixed-brand {
+  width: auto;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 2px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  #app-side-bar {
+    // padding-left: 250px;
+  }
+  #app-side-bar.toggled {
+    padding-left: 0;
+  }
+  #app-side-bar-inside {
+    width: 250px;
+  }
+  #app-side-bar.toggled #app-side-bar-inside {
+    width: 250px;
+  }
+  #app-side-bar.hovering #app-side-bar-inside {
+    width: 50px;
+  }
+  // #app-side-bar.hovering #app-side-bar-inside.hover {
+  #app-side-bar.hovering #app-side-bar-inside:hover {
+    width: 250px;
+  }
+  // #page-content-app-side-bar {
+  //   padding: 20px;
+  //   position: relative;
+  //   -webkit-transition: all 0.5s ease;
+  //   -moz-transition: all 0.5s ease;
+  //   -o-transition: all 0.5s ease;
+  //   transition: all 0.5s ease;
+  // }
+  // #app-side-bar.toggled #page-content-app-side-bar {
+  //   position: relative;
+  //   margin-right: 0;
+  //   padding-left: 250px;
+  // }
+  // #app-side-bar.hovering #page-content-app-side-bar {
+  //   position: relative;
+  //   margin-right: 0;
+  //   margin-left: -200px;
+  //   -webkit-transition: all 0.5s ease;
+  //   -moz-transition: all 0.5s ease;
+  //   -o-transition: all 0.5s ease;
+  //   transition: all 0.5s ease;
+  //   width: auto;
+  // }
+}

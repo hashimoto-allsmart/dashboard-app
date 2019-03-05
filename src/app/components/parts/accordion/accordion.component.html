@@ -1,0 +1,8 @@
+<ngb-accordion activeIds="accordion-panel">
+  <ngb-panel id="accordion-panel">
+    <ng-template ngbPanelTitle><span>{{title}}</span></ng-template>
+    <ng-template ngbPanelContent>
+      <ng-content select="[data-accordion-body]"></ng-content>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

@@ -1,0 +1,11 @@
+@import './variable';
+
+.bg-app-header {
+  background-color: $app-header-background;
+}
+
+li, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

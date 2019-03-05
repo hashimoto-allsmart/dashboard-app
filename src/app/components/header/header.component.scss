@@ -1,0 +1,31 @@
+.app-header {
+}
+
+// ドロップダウンメニューの下矢印を消す
+.dropdown-toggle::after {
+  display: none;
+}
+
+.user-menu {
+  border-bottom: 1px solid black;
+}
+
+.show > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  padding: 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+  -moz-transition: opacity 500ms ease, visibility 500ms ease;
+  -o-transition: opacity 500ms ease, visibility 500ms ease;
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.dropdown-item {
+  border-bottom: 1px solid #F0F0F0;
+}
