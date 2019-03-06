@@ -5,7 +5,7 @@ import { verticalSlide } from 'src/app/animations/animations';
   selector: 'app-side-bar-item',
   templateUrl: './side-bar-item.component.html',
   styleUrls: ['./side-bar-item.component.scss'],
-  animations: verticalSlide('accordion', '300ms'),
+  animations: [verticalSlide('accordion', '200ms')],
 })
 export class SideBarItemComponent implements OnInit {
 

@@ -5,7 +5,7 @@ import { verticalSlide } from 'src/app/animations/animations';
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
-  animations: verticalSlide('accordion', '200ms'),
+  animations: [verticalSlide('accordion', '200ms')],
 })
 export class AccordionComponent implements OnInit {
 
