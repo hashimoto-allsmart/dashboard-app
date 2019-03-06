@@ -1,11 +1,8 @@
-<li class="side-bar-item">
+<li class="anchor-title">
   <a (click)="isVisible = !isVisible">
     <span class="pull-left"><i class="fa fa-dashboard"></i></span>{{title}}
   </a>
-  <ul>
-    <li class="link-item" [style.line-height]="itemHeight" [class.visible]="isVisible"
-      *ngFor="let item of items; let i = index" (animationstart)="onAnimationStart()"
-      (animationend)="onAnimationEnd(i)">
-      <a>{{item}}</a></li>
+  <ul *ngIf="isVisible" [@accordion]>
+    <li class="link-item" *ngFor="let item of items; let i = index"><a>{{item}}</a></li>
   </ul>
 </li>

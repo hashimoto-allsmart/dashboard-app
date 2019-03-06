@@ -1,0 +1,19 @@
+@import '../../../../styles/styles';
+
+.app-accordion {
+  margin: 1em;
+  border-radius: .25rem;
+  border: solid 0.1em darkgray;
+  box-sizing: border-box;
+}
+
+.app-accordion-header {
+  height: 3em;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  font-size: $app-font-accordion-title-size;
+}
+
+.app-accordion-body {
+  padding: 1.25rem;
+}

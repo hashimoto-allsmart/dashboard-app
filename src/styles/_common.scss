@@ -1,8 +1,30 @@
-@import './variable';
-@import './mixins';
+html {
+  background: $app-background-color;
+  height: 100%;
+}
+
+body {
+  font-family: $app-font-family;
+  height: 100%;
+  background: none;
+  font-size: $app-font-base-size !important;
+}
 
 .bg-app-header {
   background-color: $app-header-background;
+  color: $app-header-font-color;
+}
+
+.container-fluid {
+  padding-left: 60px; // サイドバー分のマージン
+  margin: 0 auto;
+  max-width: $app-container-max-witdth;
+  position: relative;
+}
+
+.anchor-title {
+  text-indent: 15px;
+  line-height: 40px;
 }
 
 li, ul {

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,9 @@ export class HeaderComponent implements OnInit {
 
   userName = 'サンプル太郎';
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -25,5 +28,9 @@ export class HeaderComponent implements OnInit {
     } else {
       this.dropDown.open();
     }
+  }
+
+  onClickHome() {
+    this.router.navigate(['/']);
   }
 }

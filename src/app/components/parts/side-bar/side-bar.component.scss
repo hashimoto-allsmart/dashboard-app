@@ -1,3 +1,5 @@
+@import '../../../../styles/variable';
+
 #app-side-bar {
   padding-top: 56px;  // ヘッダの高さ分のマージン
   padding-left: 0;
@@ -14,7 +16,7 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #404E67;
+    background: $app-side-bar-background;
     transition: all 0.5s ease;
     // 表示するリスト
     .sidebar-nav {

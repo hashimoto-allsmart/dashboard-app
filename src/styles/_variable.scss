@@ -1,2 +1,25 @@
+// フォントファミリー
+$app-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic, '\30D2\30E9\30AE\30CE\89D2\30B4\20\50\72\6F\20\57\33', 'Hiragino Kaku Gothic ProN', Arial, '\30E1\30A4\30EA\30AA', Meiryo, sans-serif;
+
+// 文字サイズ
+$app-font-base-size: 14px;
+$app-font-page-title-size: 16px;
+$app-font-accordion-title-size: 16px;
+
+// 色
 // $app-header-background: #002F7B;
+$app-background-color:#f4f4f4;
 $app-header-background: black;
+$app-header-font-color: white;
+$app-accordion-footer-background: none;
+$app-side-bar-background: #404E67;
+
+// 幅
+$app-container-max-witdth: 1280px;
+
+// マージン
+$app-accordion-margin-bottom: 1rem;
+
+// パディング
+$app-accordion-header-padding: 0;
+$app-accordion-body-padding-bottom: 0;

@@ -1,5 +1,5 @@
 <nav class="app-header navbar navbar-dark bg-app-header fixed-top">
-  <a class="navbar-brand" [routerLink]="['/']">
+  <a class="navbar-brand clickable" (click)="onClickHome()">
     {{title}}
     <!-- <img src="assets/images/logo_komtrax_plus.png"> -->
   </a>
@@ -7,10 +7,10 @@
     <div class="col">
       <div ngbDropdown class="d-inline-block" #headerDrop="ngbDropdown">
         <button type="button" class="btn btn-outline-light icon-button" id="dropdownMenu" ngbDropdownAnchor
-          (mouseover)="onClick()" (click)="onClick()">
+          (mouseover)="headerDrop.open()" (click)="onClick()">
           <i class="fa fa-list"></i> {{userName}}
         </button>
-        <div ngbDropdownMenu aria-labelledby="dropdownMenu">
+        <div class="clickable" ngbDropdownMenu aria-labelledby="dropdownMenu">
           <div class="user-menu">
             <app-header-drop-down [title]="'User Profile'" [icon]="'fa-user'"></app-header-drop-down>
           </div>
