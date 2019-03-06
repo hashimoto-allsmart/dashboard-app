@@ -2,7 +2,10 @@
   <a (click)="isVisible = !isVisible">
     <span class="pull-left"><i class="fa fa-dashboard"></i></span>{{title}}
   </a>
-  <ul class="nav-pills">
-    <li [class.visible]="isVisible" *ngFor="let item of items"><a>{{item}}</a></li>
+  <ul>
+    <li class="link-item" [style.line-height]="itemHeight" [class.visible]="isVisible"
+      *ngFor="let item of items; let i = index" (animationstart)="onAnimationStart()"
+      (animationend)="onAnimationEnd(i)">
+      <a>{{item}}</a></li>
   </ul>
 </li>

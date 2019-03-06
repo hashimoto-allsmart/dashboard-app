@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @ViewChild('headerDrop') dropDown: NgbDropdown;
 
   title = 'Title';
 
@@ -16,4 +19,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick() {
+    if (this.dropDown.isOpen()) {
+      this.dropDown.close();
+    } else {
+      this.dropDown.open();
+    }
+  }
 }

@@ -10,8 +10,6 @@ export class SideBarComponent implements OnInit {
 
   @ViewChildren(SideBarItemComponent) children: QueryList<SideBarItemComponent>;
 
-  isOpen = false;
-
   isVisible = false;
 
   isHovering = true;
@@ -27,8 +25,10 @@ export class SideBarComponent implements OnInit {
     this.isHovering = (this.isVisible) ? false : true;
   }
 
-  onClose() {
-    this.isOpen = false;
-    this.children.forEach(child => child.isVisible = false);
+  onTransitionEnd() {
+    const width = document.getElementById('app-side-bar-inside').clientWidth;
+    if (width === 50) {
+      this.children.forEach(child => child.isVisible = false);
+    }
   }
 }

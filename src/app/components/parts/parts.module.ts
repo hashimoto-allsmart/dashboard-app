@@ -10,7 +10,7 @@ import { SideBarItemComponent } from './side-bar/side-bar-item/side-bar-item.com
   declarations: [
     AccordionComponent,
     SideBarComponent,
-    SideBarItemComponent,
+    SideBarItemComponent
   ],
   imports: [
     NgbModule,
@@ -19,7 +19,7 @@ import { SideBarItemComponent } from './side-bar/side-bar-item/side-bar-item.com
   ],
   exports: [
     SideBarComponent,
-    SideBarItemComponent,
+    SideBarItemComponent
   ]
 })
 export class PartsModule { }

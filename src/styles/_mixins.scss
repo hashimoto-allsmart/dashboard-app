@@ -1,0 +1,21 @@
+@mixin anchor-style ($color: #fff, $background: rgba(255, 255, 255, 0.2), $marker: red 3px solid ) {
+  li {
+    > a {
+      display: block;
+      text-decoration: none;
+      color: $color;
+      > span i {
+        margin-left: -12px;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $color;
+        background: $background;
+        border-left: $marker;
+      }
+      &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

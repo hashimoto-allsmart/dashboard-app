@@ -1,4 +1,4 @@
-<nav class="app-header navbar navbar-dark bg-app-header sticky-top">
+<nav class="app-header navbar navbar-dark bg-app-header fixed-top">
   <a class="navbar-brand" [routerLink]="['/']">
     {{title}}
     <!-- <img src="assets/images/logo_komtrax_plus.png"> -->
@@ -7,17 +7,17 @@
     <div class="col">
       <div ngbDropdown class="d-inline-block" #headerDrop="ngbDropdown">
         <button type="button" class="btn btn-outline-light icon-button" id="dropdownMenu" ngbDropdownAnchor
-          (mouseover)="headerDrop.open()">
+          (mouseover)="onClick()" (click)="onClick()">
           <i class="fa fa-list"></i> {{userName}}
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownMenu">
           <div class="user-menu">
-            <button class="dropdown-item icon-button"><i class="fa fa-user"></i> User Profile</button>
+            <app-header-drop-down [title]="'User Profile'" [icon]="'fa-user'"></app-header-drop-down>
           </div>
           <div>
-            <button class="dropdown-item icon-button"><i class="fa fa-users"></i> App1</button>
-            <button class="dropdown-item icon-button"><i class="fa fa-key"></i> App2</button>
-            <button class="dropdown-item icon-button"><i class="fa fa-info-circle"></i> App3</button>
+            <app-header-drop-down [title]="'App1'" [icon]="'fa-users'"></app-header-drop-down>
+            <app-header-drop-down [title]="'App2'" [icon]="'fa-key'"></app-header-drop-down>
+            <app-header-drop-down [title]="'App3'" [icon]="'fa-info-circle'"></app-header-drop-down>
           </div>
         </div>
       </div>
