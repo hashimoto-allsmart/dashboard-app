@@ -6,7 +6,7 @@ import { openClose } from 'src/app/animations/animations';
   selector: 'app-drop-down',
   templateUrl: './drop-down.component.html',
   styleUrls: ['./drop-down.component.scss'],
-  animations: [openClose()],
+  // animations: [openClose()],
 })
 export class DropDownComponent implements OnInit {
 
