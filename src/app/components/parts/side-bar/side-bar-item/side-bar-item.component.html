@@ -1,8 +1,6 @@
 <li class="anchor-title">
-  <a (click)="isVisible = !isVisible">
-    <span class="pull-left"><i class="fa fa-dashboard"></i></span>{{title}}
-  </a>
+  <app-anchor [icon]="'fa-dashboard'" [isLight]=true (click)="isVisible = !isVisible"></app-anchor>
   <ul *ngIf="isVisible" [@accordion]>
-    <li class="link-item" *ngFor="let item of items; let i = index"><a>{{item}}</a></li>
+    <app-anchor [title]="item" [isLight]=true *ngFor="let item of items; let i = index"></app-anchor>
   </ul>
 </li>

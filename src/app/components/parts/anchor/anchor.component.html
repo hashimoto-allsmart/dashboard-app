@@ -1,0 +1,6 @@
+<li>
+  <a class="clickable" [ngClass]="{'light': isLight, 'no-icon': !icon}">
+    <i *ngIf="icon" class="fa fa-lg" [ngClass]="icon"></i>
+    {{title}}
+  </a>
+</li>

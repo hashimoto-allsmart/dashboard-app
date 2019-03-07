@@ -1,4 +1,10 @@
+
+@import '../../../../styles/styles';
+
 .app-header {
+  background-color: $app-theme-color;
+  color: $app-font-color;
+  font-weight: bold;
 }
 
 // ドロップダウンメニューの下矢印を消す
@@ -8,22 +14,6 @@
 
 .user-menu {
   border-bottom: 1px solid darkgray;
-}
-
-.show > .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown-menu {
-  padding: 0;
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 500ms ease, visibility 500ms ease;
-  -moz-transition: opacity 500ms ease, visibility 500ms ease;
-  -o-transition: opacity 500ms ease, visibility 500ms ease;
-  transition: opacity 500ms ease, visibility 500ms ease;
 }
 
 .dropdown-item {

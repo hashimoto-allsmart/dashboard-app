@@ -2,18 +2,25 @@
 
 .app-accordion {
   margin: 1em;
-  border-radius: .25rem;
-  border: solid 0.1em darkgray;
+  border-radius: 0;
+  border: solid 1px #ECECEC;
+  background-color: #fff;
   box-sizing: border-box;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 
 .app-accordion-header {
+  border-radius: .2rem .2rem 0 0;
   height: 3em;
-  background-color: rgba(0,0,0,.03);
-  border-bottom: 1px solid rgba(0,0,0,.125);
-  font-size: $app-font-accordion-title-size;
+  color: $app-font-color;
+  border-color: $app-font-color;
+  font-weight: bold;
+  background: $app-theme-color;
+  font-size: $app-font-title-size;
+  text-shadow: none;
 }
 
-.app-accordion-body {
+.app-accordion-body, .app-accordion-footer {
   padding: 1.25rem;
+  background: $app-content-background-color;
 }

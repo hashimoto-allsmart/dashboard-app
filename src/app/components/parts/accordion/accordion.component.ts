@@ -9,7 +9,7 @@ import { verticalSlide } from 'src/app/animations/animations';
 })
 export class AccordionComponent implements OnInit {
 
-  showDetail = false;
+  showDetail = true;
 
   @Input() title = 'title';
 

@@ -9,8 +9,7 @@
   </div>
   <div class="col-md-12" *ngIf="showDetail" [@accordion]>
     <ng-content class="app-accordion-body" select="[data-accordion-body]"></ng-content>
-  </div>
-  <div class="app-accordion-footer col-md-12" *ngIf="showDetail" [@accordion]>
-    <ng-content select="[data-accordion-footer]"></ng-content>
+    <ng-content class="app-accordion-footer" select="[data-accordion-footer]">
+    </ng-content>
   </div>
 </div>

@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { openClose } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-select-form',
   templateUrl: './select-form.component.html',
-  styleUrls: ['./select-form.component.scss']
+  styleUrls: ['./select-form.component.scss'],
+  animations: [openClose()],
 })
 export class SelectFormComponent implements OnInit {
 
-  title = 'select';
+  @Input() title = 'select-form';
 
-  value: any;
+  @Input() items = [
+    { name: 'aaa', id: '1' },
+  ];
 
-  items = [true, 'Two', 3];
-
-  constructor() { }
+  value: string;
 
   ngOnInit() {
   }
-
 }

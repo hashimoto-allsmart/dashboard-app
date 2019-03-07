@@ -10,11 +10,6 @@ body {
   font-size: $app-font-base-size !important;
 }
 
-.bg-app-header {
-  background-color: $app-header-background;
-  color: $app-header-font-color;
-}
-
 .container-fluid {
   padding-left: 60px; // サイドバー分のマージン
   margin: 0 auto;
@@ -22,16 +17,11 @@ body {
   position: relative;
 }
 
-.anchor-title {
-  text-indent: 15px;
-  line-height: 40px;
-}
-
 li, ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-indent: 15px;
+  // text-indent: 15px;
 }
 
 .clickable {

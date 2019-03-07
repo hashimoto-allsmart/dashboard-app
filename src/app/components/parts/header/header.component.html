@@ -1,26 +1,22 @@
-<nav class="app-header navbar navbar-dark bg-app-header fixed-top">
+<nav class="app-header navbar navbar-dark fixed-top">
   <a class="navbar-brand clickable" (click)="onClickHome()">
     {{title}}
     <!-- <img src="assets/images/logo_komtrax_plus.png"> -->
   </a>
   <div class="row">
     <div class="col">
-      <div ngbDropdown class="d-inline-block" #headerDrop="ngbDropdown">
-        <button type="button" class="btn btn-outline-light icon-button" id="dropdownMenu" ngbDropdownAnchor
-          (mouseover)="headerDrop.open()" (click)="onClick()">
-          <i class="fa fa-list"></i> {{userName}}
-        </button>
-        <div class="clickable" ngbDropdownMenu aria-labelledby="dropdownMenu">
+      <app-drop-down [icon]="'fa-list'" [title]="'コマツ太郎'" [buttonStyle]="'btn-outline-light'" [isOnMouseOpen]=true>
+        <div data-drop-down-menu>
           <div class="user-menu">
-            <app-header-drop-down [title]="'User Profile'" [icon]="'fa-user'"></app-header-drop-down>
+            <app-anchor [title]="'User Profile'" [icon]="'fa-user'"></app-anchor>
           </div>
           <div>
-            <app-header-drop-down [title]="'App1'" [icon]="'fa-users'"></app-header-drop-down>
-            <app-header-drop-down [title]="'App2'" [icon]="'fa-key'"></app-header-drop-down>
-            <app-header-drop-down [title]="'App3'" [icon]="'fa-info-circle'"></app-header-drop-down>
+            <app-anchor [title]="'App1'" [icon]="'fa-users'"></app-anchor>
+            <app-anchor [title]="'App2'"></app-anchor>
+            <app-anchor [title]="'App2'" [icon]="'fa-info-circle'"></app-anchor>
           </div>
         </div>
-      </div>
+      </app-drop-down>
     </div>
   </div>
 </nav>

@@ -1,0 +1,5 @@
+<div>
+  <button type="button" class="btn" [ngClass]="buttonStyle" [ngClass]="{'icon-button': icon !== ''}" id="dropdownMenu">
+    <i *ngIf="icon" class="fa" [ngClass]="icon"></i> {{title}}
+  </button>
+</div>

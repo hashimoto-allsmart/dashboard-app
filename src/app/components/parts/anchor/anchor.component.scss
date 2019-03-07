@@ -1,0 +1,35 @@
+li {
+  position: relative;
+  display: block;
+  text-align: -webkit-match-parent;
+  box-sizing: content-box;
+  > a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: dark;
+      background: rgba(104, 104, 104, 0.2);
+    }
+    &.light {
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+    &.no-icon, &.light.no-icon {
+      padding: 1rem;
+    }
+    position: relative;
+    display: block;
+    text-decoration: none;
+    > i {
+      text-align: center;
+      padding: 1rem;
+    }
+    &:active, &:focus {
+    text-decoration: none;
+    }
+  }
+}

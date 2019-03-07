@@ -3,23 +3,15 @@ $app-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic,
 
 // 文字サイズ
 $app-font-base-size: 14px;
-$app-font-page-title-size: 16px;
-$app-font-accordion-title-size: 16px;
+$app-font-title-size: 16px;
 
 // 色
-// $app-header-background: #002F7B;
-$app-background-color:#f4f4f4;
-$app-header-background: black;
-$app-header-font-color: white;
-$app-accordion-footer-background: none;
+// $app-theme-color: #0866c6;
+$app-theme-color: #0e1271;
+$app-font-color: white;
+$app-background-color:#E8E8E8;
+$app-content-background-color: white;
 $app-side-bar-background: #404E67;
 
 // 幅
 $app-container-max-witdth: 1280px;
-
-// マージン
-$app-accordion-margin-bottom: 1rem;
-
-// パディング
-$app-accordion-header-padding: 0;
-$app-accordion-body-padding-bottom: 0;
