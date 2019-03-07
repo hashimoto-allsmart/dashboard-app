@@ -13,6 +13,7 @@ import { SelectFormComponent } from './form/select-form/select-form.component';
 import { DropDownComponent } from './drop-down/drop-down.component';
 import { AnchorComponent } from './anchor/anchor.component';
 import { ButtonComponent } from './button/button.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ButtonComponent } from './button/button.component';
     DropDownComponent,
     AnchorComponent,
     ButtonComponent,
+    TableComponent,
   ],
   imports: [
     NgbModule,
