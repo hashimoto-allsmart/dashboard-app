@@ -1,12 +1,11 @@
 @import '../../../../styles/styles';
 
 .app-accordion {
-  margin: 1em;
   border-radius: 0;
-  border: solid 1px #ECECEC;
+  border: solid .1rem #ECECEC;
   background-color: #fff;
   box-sizing: border-box;
-  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 .1rem .1rem rgba(0,0,0,.05);
 }
 
 .app-accordion-header {
