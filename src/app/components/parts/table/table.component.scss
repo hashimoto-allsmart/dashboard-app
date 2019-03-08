@@ -1,0 +1,37 @@
+.table {
+  margin-bottom: 0;
+}
+
+.app-table {
+  .scroll-area {
+    thead {
+      th, td {
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        color: #110055;
+        background-color: #f5f5ff;
+        vertical-align: middle;
+        font-weight: normal;
+      }
+      .fixed-header {
+        z-index: 2;
+      }
+    }
+    tbody th {
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 1;
+    }
+    th, td {
+      box-shadow: 0 0 0 0.2px #dee2e6 inset;
+      background: #fff;
+      border: none;
+      font-weight: normal;
+      vertical-align: middle;
+    }
+    .no-row-data {
+      height: 29px;
+    }
+  }
+}

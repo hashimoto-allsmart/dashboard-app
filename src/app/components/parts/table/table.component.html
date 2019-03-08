@@ -1,3 +1,27 @@
-<p>
-  table works!
-</p>
+<div class="app-table row no-gutters">
+  <div class="table-responsive col-md-12">
+    <table class="scroll-area table text-nowrap table-hover table-sm fixed-table">
+      <thead>
+        <tr>
+          <th *ngFor="let column of fixedHeaderColumns; let columnIndex = index" class="fixed-header text-center"
+            [style.left]="column.left">
+            <div class="flap-text" [innerHTML]="column.value"></div>
+          </th>
+          <th *ngFor="let column of variableColumns; let columnIndex = index" class="text-center">
+            <div class="flap-text" [innerHTML]="column.value"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of dataRows; let rowIndex = index">
+          <th *ngFor="let column of row.fixedColumns; let colIndex = index" [style.left]="column.left">
+            <div class="flap-text" [innerHTML]="column.value"></div>
+          </th>
+          <td *ngFor="let column of row.variableColumns; let colIndex = index">
+            <div class="flap-text" [innerHTML]="column.value"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

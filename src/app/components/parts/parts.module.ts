@@ -42,7 +42,8 @@ import { TableComponent } from './table/table.component';
     SelectFormComponent,
     DropDownComponent,
     AnchorComponent,
-    ButtonComponent
+    ButtonComponent,
+    TableComponent
   ]
 })
 export class PartsModule { }
