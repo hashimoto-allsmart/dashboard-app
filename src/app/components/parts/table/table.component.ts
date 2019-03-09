@@ -9,10 +9,13 @@ import { TableService } from '../../../services/parts/table/table.service';
 })
 export class TableComponent implements OnInit {
 
+  /** プロパティ */
   @Input() properties: ColumnProperty[];
 
+  /** ヘッダー項目 */
   @Input() items: HeaderItem[];
 
+  /** データ項目 */
   @Input() rows: any[];
 
   /** テーブル要素 */
@@ -22,10 +25,13 @@ export class TableComponent implements OnInit {
   fixedHeaderColumns: ColumnData[];
 
   /** ヘッダカラム(可変) */
-  variableColumns: ColumnData[];
+  variableHeaderColumns: ColumnData[];
 
   /** データカラム */
   dataRows: { fixedColumns: ColumnData[], variableColumns: ColumnData[] }[];
+
+  /** 固定カラム位置 */
+  fixedColumnPosition = {};
 
   constructor(
     element: ElementRef,
@@ -40,7 +46,7 @@ export class TableComponent implements OnInit {
 
   private init() {
     this.fixedHeaderColumns = this.tableService.createHeaderColumns(this.properties, this.items, true);
-    this.variableColumns = this.tableService.createHeaderColumns(this.properties, this.items, false);
+    this.variableHeaderColumns = this.tableService.createHeaderColumns(this.properties, this.items, false);
     this.dataRows = this.rows.map(row => {
       return {
         fixedColumns: this.tableService.createDataColumns(this.properties, row, true),
@@ -52,8 +58,7 @@ export class TableComponent implements OnInit {
       const headers = this.el.getElementsByClassName('fixed-header');
       if (!headers) { return; }
       Array.from(headers).forEach((item, index) => {
-        this.fixedHeaderColumns[index].left = `${left}px`;
-        this.dataRows.forEach(r => r.fixedColumns[index].left = `${left}px`);
+        this.fixedColumnPosition[index] = `${left}px`;
         left += item.clientWidth;
       });
     }, 100);

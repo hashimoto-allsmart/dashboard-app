@@ -1,16 +1,19 @@
+@import '../../../../styles/styles.scss';
+
 .table {
   margin-bottom: 0;
 }
 
 .app-table {
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,.25);
   .scroll-area {
     thead {
       th, td {
         top: 0;
         position: -webkit-sticky;
         position: sticky;
-        color: #110055;
-        background-color: #f5f5ff;
+        color: $app-font-color;
+        background-color: $app-theme-color;
         vertical-align: middle;
         font-weight: normal;
       }
@@ -29,9 +32,6 @@
       border: none;
       font-weight: normal;
       vertical-align: middle;
-    }
-    .no-row-data {
-      height: 29px;
     }
   }
 }
