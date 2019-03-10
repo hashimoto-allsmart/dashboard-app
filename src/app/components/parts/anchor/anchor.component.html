@@ -1,5 +1,5 @@
 <li>
-  <a class="clickable" [ngClass]="class">
+  <a class="clickable" [ngClass]="class" (click)="onClick($event)">
     <i *ngIf="item.icon" class="fa fa-lg" [ngClass]="item.icon"></i>
     {{item.title}}
   </a>

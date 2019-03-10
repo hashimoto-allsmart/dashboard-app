@@ -4,7 +4,8 @@
       <li *ngFor="let item of items; let i = index" class="anchor-title">
         <app-anchor [item]="item" (click)="isItemVisible[i] = !isItemVisible[i]"></app-anchor>
         <ul *ngIf="isItemVisible[i]" [@accordion]>
-          <app-anchor *ngFor="let item of item.items; let i = index" [item]="item"></app-anchor>
+          <app-anchor (click)="onLinkClick($event)" *ngFor="let item of item.items; let i = index" [item]="item">
+          </app-anchor>
         </ul>
       </li>
     </ul>

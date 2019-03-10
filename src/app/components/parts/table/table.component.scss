@@ -1,7 +1,15 @@
 @import '../../../../styles/styles';
 
+div > select {
+  margin-left: 1rem;
+}
+
 .table {
   margin-bottom: 0;
+}
+
+.custom-select:after {
+  display: none;
 }
 
 .app-table {

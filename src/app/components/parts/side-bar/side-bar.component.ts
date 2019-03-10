@@ -39,4 +39,8 @@ export class SideBarComponent implements OnInit {
       this.isItemVisible = this.isItemVisible.map(_ => false);
     }
   }
+
+  onLinkClick(event: any) {
+    // console.dir(event);
+  }
 }

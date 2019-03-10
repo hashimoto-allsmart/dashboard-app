@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { ColumnData, ColumnProperty, HeaderItem } from './../../../models/parts/table';
+import { Component, Input, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
+import { ColumnData, ColumnProperty, HeaderItem, PagerItem } from './../../../models/parts/table';
 import { TableService } from '../../../services/parts/table/table.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { TableService } from '../../../services/parts/table/table.service';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnChanges {
 
   /** プロパティ */
   @Input() properties: ColumnProperty[];
@@ -17,6 +17,9 @@ export class TableComponent implements OnInit {
 
   /** データ項目 */
   @Input() rows: any[];
+
+  /** ページャ項目 */
+  @Input() pagerItem: PagerItem;
 
   /** テーブル要素 */
   el: HTMLElement;
@@ -33,6 +36,11 @@ export class TableComponent implements OnInit {
   /** 固定カラム位置 */
   fixedColumnPosition = {};
 
+  /**
+   * コンストラクタ
+   * @param element 要素
+   * @param tableService テーブルサービス
+   */
   constructor(
     element: ElementRef,
     private tableService: TableService
@@ -40,8 +48,15 @@ export class TableComponent implements OnInit {
     this.el = element.nativeElement;
   }
 
-  ngOnInit() {
-    this.init();
+  /**
+   * 変更検知
+   * @param changes 変更要素
+   */
+  ngOnChanges(changes: SimpleChanges) {
+    // 必須の入力項目が揃っている場合
+    if (changes.properties && changes.items && changes.rows) {
+      this.init();
+    }
   }
 
   private init() {

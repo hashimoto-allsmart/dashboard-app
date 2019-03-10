@@ -1,3 +1,11 @@
+<div *ngIf="pagerItem" class="row justify-content-end">
+  <ngb-pagination class="align-self-center" [collectionSize]="pagerItem.total" [maxSize]=5 [(page)]="pagerItem.from"
+    [pageSize]="pagerItem.count">
+  </ngb-pagination>
+  <select class="custom-select align-self-center" style="width: auto" [(ngModel)]="pagerItem.count">
+    <option *ngFor="let count of pagerItem.displayCount" [ngValue]="count">{{count}}</option>
+  </select>
+</div>
 <div class="app-table row">
   <div class="table-responsive">
     <table class="scroll-area table text-nowrap table-hover table-sm fixed-table">

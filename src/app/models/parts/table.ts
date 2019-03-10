@@ -1,6 +1,14 @@
 import { objectCopy } from '../../utils/utils';
 import { CELL_TYPE } from '../../constants/parts/table';
 
+/** ページング項目 */
+export interface PagerItem {
+  total: number;
+  from: number;
+  count: number;
+  displayCount: number[];
+}
+
 /** ヘッダ表示用アイテム */
 export interface HeaderItem {
   itemCode: string;

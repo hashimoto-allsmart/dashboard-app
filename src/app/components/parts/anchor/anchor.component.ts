@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { AncorItem } from 'src/app/models/parts/anchor';
 
 @Component({
@@ -10,6 +10,8 @@ export class AnchorComponent implements OnChanges {
 
   @Input() item = {} as AncorItem;
 
+  @Output() anchorClick = new EventEmitter<AncorItem>();
+
   class = [] as string[];
 
   constructor() { }
@@ -20,4 +22,9 @@ export class AnchorComponent implements OnChanges {
     // クラスが指定されている場合は追加
     if (this.item.css) { this.class.push(this.item.css) }
   }
+
+  /**
+   * クリックイベント
+   */
+  onClick() { this.anchorClick.emit(this.item); }
 }

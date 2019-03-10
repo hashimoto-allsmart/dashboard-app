@@ -1,4 +1,4 @@
-import { ColumnProperty } from 'src/app/models/parts/table';
+import { ColumnProperty, PagerItem } from 'src/app/models/parts/table';
 import { ColumnData, HeaderItem } from './../../../models/parts/table';
 import { Component, OnInit } from '@angular/core';
 
@@ -47,6 +47,13 @@ export class SampleComponent implements OnInit {
     { path: 'aaa.bbb.ccc:0.ddd.eee', itemCode: 'item2', isFixed: false },
     { path: 'aaa.bbb.ccc:0.ddd.eee', itemCode: 'item2', isFixed: false },
   ] as ColumnProperty[]
+
+  pagerItem = {
+    total: 100,
+    from: 1,
+    count: 10,
+    displayCount: [10, 50, 100]
+  } as PagerItem;
 
   ngOnInit() {
   }
