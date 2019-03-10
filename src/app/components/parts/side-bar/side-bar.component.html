@@ -1,9 +1,9 @@
 <div id="app-side-bar" [class.hovering]="isHovering" [class.toggled]="isVisible">
   <div id="app-side-bar-inside" (transitionend)="onTransitionEnd()">
     <ul class="sidebar-nav">
-      <li *ngFor="let item of items" class="anchor-title">
-        <app-anchor [item]="item" (click)="isItemVisible = !isItemVisible"></app-anchor>
-        <ul *ngIf="isItemVisible" [@accordion]>
+      <li *ngFor="let item of items; let i = index" class="anchor-title">
+        <app-anchor [item]="item" (click)="isItemVisible[i] = !isItemVisible[i]"></app-anchor>
+        <ul *ngIf="isItemVisible[i]" [@accordion]>
           <app-anchor *ngFor="let item of item.items; let i = index" [item]="item"></app-anchor>
         </ul>
       </li>

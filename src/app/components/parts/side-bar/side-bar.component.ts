@@ -12,18 +12,20 @@ export class SideBarComponent implements OnInit {
 
   isVisible = false;
 
-  isItemVisible = false;
+  isItemVisible: boolean[];
 
   isHovering = true;
 
   items = [
-    { key: 'anchor1', title: 'ダッシュボード', css: 'light', icon: 'fa-dashboard', items: [{ key: 'anchor1', title: 'anchor1', css: 'light' }] }
+    { key: 'anchor1', title: 'ダッシュボード', css: 'light', icon: 'fa-dashboard' },
+    { key: 'anchor2', title: '管理', css: 'light', icon: 'fa-dashboard', items: [{ key: 'anchor1', title: '登録', css: 'light' }] }
   ] as SideBarItem[];
 
   constructor() {
   }
 
   ngOnInit() {
+    this.isItemVisible = this.items.map(_ => false);
   }
 
   onClick() {
@@ -33,6 +35,8 @@ export class SideBarComponent implements OnInit {
 
   onTransitionEnd() {
     const width = document.getElementById('app-side-bar-inside').clientWidth;
-    if (width === 50) { this.isItemVisible = false; }
+    if (width === 50) {
+      this.isItemVisible = this.isItemVisible.map(_ => false);
+    }
   }
 }
