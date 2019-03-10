@@ -4,12 +4,22 @@ div > select {
   margin-left: 1rem;
 }
 
-.table {
-  margin-bottom: 0;
+.custom-select {
+  font-size: 1em;
 }
 
-.custom-select:after {
-  display: none;
+::ng-deep .page-link {
+  color: black;
+}
+
+::ng-deep .page-item.active .page-link {
+  background-color: darkgray;
+  border-color: darkgray;
+  color: white;
+}
+
+.table {
+  margin-bottom: 0;
 }
 
 .app-table {
