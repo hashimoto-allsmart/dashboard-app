@@ -40,8 +40,6 @@ export class ColumnData {
 
   private _isFixed: boolean;
 
-  private _left: string;
-
   constructor(property: ColumnProperty, data: any, isHeader?: boolean) {
     this._key = property.path;
     this._value = (!isHeader) ? this.getJsonValue(this.key, data) : data;
@@ -56,10 +54,6 @@ export class ColumnData {
 
   /** 固定表示要否 */
   get isFixed() { return this._isFixed; }
-
-  /** 左位置 */
-  get left() { return this._left; }
-  set left(value: string) { this._left = value; }
 
   /**
    * Json設定値取得

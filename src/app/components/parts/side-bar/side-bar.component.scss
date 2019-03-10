@@ -1,4 +1,4 @@
-@import '../../../../styles/variable';
+@import '../../../../styles/styles';
 
 #app-side-bar {
   padding-top: 56px;  // ヘッダの高さ分のマージン
@@ -8,7 +8,7 @@
   // サイドナビの内側
   #app-side-bar-inside {
     position: fixed;
-    z-index: 2000;
+    z-index: 1051;
     width: 250px;
     left: 250px;
     margin-left: -250px;
@@ -16,7 +16,7 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background: $app-side-bar-background;
+    background: $app-theme-color;
     transition: all 0.5s ease;
     // 表示するリスト
     .sidebar-nav {

@@ -10,12 +10,16 @@ body {
   font-size: $app-font-base-size !important;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .container-fluid {
-  padding-left: 60px; // サイドバー分のマージン
+  padding-left: 65px; // サイドバー分のマージン
   margin: 0 auto;
   max-width: $app-container-max-witdth;
   position: relative;
-  // padding: 1rem;
 }
 
 li, ul {
@@ -31,4 +35,21 @@ li, ul {
 
 .flap-text {
   white-space: pre-wrap;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.accordion-body {
+  padding: 1rem;
+}
+
+.accordion-footer {
+  border-top: solid .01rem darkgray;
+  padding: .5em;
 }

@@ -1,8 +1,6 @@
 <div ngbDropdown class="d-inline-block" #dropdown="ngbDropdown" [placement]="'bottom-right'">
   <app-button [title]="title" [icon]="icon" [buttonStyle]="buttonStyle" id="dropdownMenu" ngbDropdownAnchor
     (mouseover)="onMouseOver()" (click)="onClick()"></app-button>
-  <!-- <div class="clickable" ngbDropdownMenu aria-labelledby="dropdownMenu"
-    [@openClose]="dropdown.isOpen() ? 'open' : 'closed'"> -->
   <div class="clickable" ngbDropdownMenu aria-labelledby="dropdownMenu">
     <ng-content select="[data-drop-down-menu]"></ng-content>
   </div>

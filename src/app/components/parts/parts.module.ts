@@ -7,7 +7,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { AccordionComponent } from './accordion/accordion.component';
-import { SideBarItemComponent } from './side-bar/side-bar-item/side-bar-item.component';
 import { HeaderComponent } from './header/header.component';
 import { SelectFormComponent } from './form/select-form/select-form.component';
 import { DropDownComponent } from './drop-down/drop-down.component';
@@ -19,7 +18,6 @@ import { TableComponent } from './table/table.component';
   declarations: [
     AccordionComponent,
     SideBarComponent,
-    SideBarItemComponent,
     HeaderComponent,
     SelectFormComponent,
     DropDownComponent,
@@ -37,7 +35,6 @@ import { TableComponent } from './table/table.component';
   exports: [
     AccordionComponent,
     SideBarComponent,
-    SideBarItemComponent,
     HeaderComponent,
     SelectFormComponent,
     DropDownComponent,

@@ -3,9 +3,10 @@
 
 .app-header {
   background-color: $app-theme-color;
-  color: $app-font-color;
+  color: $app-theme-font-color;
   font-weight: bold;
   box-shadow: 2px 0 3px rgba(0,0,0,.5);
+  z-index: 1052;
 }
 
 // ドロップダウンメニューの下矢印を消す

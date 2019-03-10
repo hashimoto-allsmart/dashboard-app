@@ -1,4 +1,4 @@
-@import '../../../../styles/styles.scss';
+@import '../../../../styles/styles';
 
 .table {
   margin-bottom: 0;
@@ -12,7 +12,7 @@
         top: 0;
         position: -webkit-sticky;
         position: sticky;
-        color: $app-font-color;
+        color: $app-theme-font-color;
         background-color: $app-theme-color;
         vertical-align: middle;
         font-weight: normal;

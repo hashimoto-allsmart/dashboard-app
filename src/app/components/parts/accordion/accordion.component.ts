@@ -11,7 +11,7 @@ export class AccordionComponent implements OnInit {
 
   showDetail = true;
 
-  @Input() title = 'title';
+  @Input() title = 'Accordion title';
 
   constructor() { }
 

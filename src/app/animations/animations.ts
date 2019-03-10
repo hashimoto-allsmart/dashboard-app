@@ -8,7 +8,7 @@ export function verticalSlide(name: string, speed: string, show = ':enter', hide
     ]),
     transition(hide, [
       style({ height: '*', opacity: '1', overflow: 'hidden' }),
-      animate(speed, style({ height: '0' }))
+      animate(speed, style({ height: '0', opacity: 0 }))
     ])
   ]);
 }

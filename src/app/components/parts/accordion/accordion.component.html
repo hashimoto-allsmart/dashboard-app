@@ -1,15 +1,12 @@
-<div class="app-accordion row">
-  <div class="col-md-12">
-    <div class="app-accordion-header row align-items-center clickable" (click)="showDetail = !showDetail">
-      <div class="col-sm-4 col-md-4 text-left">{{title}}</div>
-      <div class="col-sm-8 col-md-8 text-right">
-        <i [ngClass]="showDetail ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i>
-      </div>
+<div class="app-accordion">
+  <div class="app-accordion-header row align-items-center clickable" (click)="showDetail = !showDetail">
+    <div class="col-4 text-left">{{title}}</div>
+    <div class="col-8 text-right">
+      <i [ngClass]="showDetail ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i>
     </div>
   </div>
-  <div class="col-md-12" *ngIf="showDetail" [@accordion]>
+  <div class="col-12 app-accordion-inside" *ngIf="showDetail" [@accordion]>
     <ng-content class="app-accordion-body" select="[data-accordion-body]"></ng-content>
-    <ng-content class="app-accordion-footer" select="[data-accordion-footer]">
-    </ng-content>
+    <ng-content class="app-accordion-footer" select="[data-accordion-footer]"></ng-content>
   </div>
 </div>
