@@ -8,12 +8,12 @@
       <app-drop-down [icon]="'fa-list'" [title]="'コマツ太郎'" [buttonStyle]="'btn-outline-light'" [isOnMouseOpen]=true>
         <div data-drop-down-menu>
           <div class="user-menu">
-            <!-- <app-anchor [title]="'User Profile'" [icon]="'fa-user'"></app-anchor> -->
+            <app-anchor [item]="userProfile"></app-anchor>
           </div>
           <div>
-            <!-- <app-anchor [title]="'App1'" [icon]="'fa-users'"></app-anchor>
-            <app-anchor [title]="'App2'"></app-anchor>
-            <app-anchor [title]="'App2'" [icon]="'fa-info-circle'"></app-anchor> -->
+            <app-anchor [item]="app1"></app-anchor>
+            <app-anchor [item]="app2"></app-anchor>
+            <app-anchor [item]="app3"></app-anchor>
           </div>
         </div>
       </app-drop-down>
