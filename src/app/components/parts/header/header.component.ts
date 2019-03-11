@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   userProfile = { key: 'user', title: 'User Profile', icon: 'fa-user' };
   app1 = { key: 'app1', title: 'App1', icon: 'fa-users' };
-  app2 = { key: 'app2', title: 'App2' };
+  app2 = { key: 'app2', title: 'App2', icon: 'fa-key' };
   app3 = { key: 'app3', title: 'App3', icon: 'fa-info-circle' };
 
   constructor(
