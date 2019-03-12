@@ -11,11 +11,11 @@
     <table class="scroll-area table text-nowrap table-hover table-sm fixed-table">
       <thead>
         <tr>
-          <th *ngFor="let column of fixedHeaderColumns; let columnIndex = index" class="fixed-header text-center"
+          <th *ngFor="let column of headerRow.fixedColumns; let columnIndex = index" class="fixed-header text-center"
             [style.left]="fixedColumnPosition[columnIndex]">
             <div class="flap-text" [innerHTML]="column.value"></div>
           </th>
-          <th *ngFor="let column of variableHeaderColumns; let columnIndex = index" class="text-center">
+          <th *ngFor="let column of headerRow.variableColumns; let columnIndex = index" class="text-center">
             <div class="flap-text" [innerHTML]="column.value"></div>
           </th>
         </tr>

@@ -1,6 +1,8 @@
-import { ColumnProperty, PagerItem } from 'src/app/models/parts/table';
-import { ColumnData, HeaderItem } from './../../../models/parts/table';
+import { HeaderRow, BodyRow } from './../../../models/parts/table/table';
+import { PagerItem } from 'src/app/models/parts/table/table';
 import { Component, OnInit } from '@angular/core';
+import { TableService } from 'src/app/services/parts/table/table.service';
+import { HeaderItem, ColumnProperty } from 'src/app/models/parts/table/properties';
 
 @Component({
   selector: 'app-sample',
@@ -9,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SampleComponent implements OnInit {
 
-  constructor() { }
+  headerRow: HeaderRow;
+  dataRows: BodyRow[];
+
+  constructor(private tableService: TableService) { }
 
   rows = [
     { aaa: { bbb: { ccc: [{ ddd: { eee: 'eee' } }, { ddd: { eee: 'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd' } }] }, fff: 1 } },
@@ -56,5 +61,7 @@ export class SampleComponent implements OnInit {
   } as PagerItem;
 
   ngOnInit() {
+    this.headerRow = this.tableService.createHeaderColumns(this.properties, this.items);
+    this.dataRows = this.tableService.createBodyColumns(this.properties, this.rows);
   }
 }
